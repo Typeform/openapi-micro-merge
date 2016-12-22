@@ -1,9 +1,13 @@
 {
   "name": "openapi-micro-merge",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Merge OpenAPI (fka Swagger) definitions for microservice environments.",
   "main": "lib/index.js",
   "readme": "README.md",
+	"repository" :
+	{ "type" : "git"
+	, "url" : "https://github.com/Typeform/openapi-micro-merge.git"
+	},
   "scripts": {
     "test": "mocha"
   },
@@ -13,7 +17,7 @@
     "Swagger",
     "Microservices"
   ],
-  "author": "Jason Harmon <jason.harmon@gmail.com>",
+  "author": "Jason Harmon <jason.harmon@gmail.com> (https://github.com/jharmn)",
   "dependencies": {
     "bluebird": "^3.4.6",
     "js-yaml": "^3.7.0",
