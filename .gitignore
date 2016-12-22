@@ -1,0 +1,5 @@
+logs
+npm-debug.log*
+swagger.json
+swagger.yaml
+node_modules
