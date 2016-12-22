@@ -1,9 +1,8 @@
 {
   "name": "openapi-micro-merge",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Merge OpenAPI (fka Swagger) definitions for microservice environments.",
   "main": "lib/index.js",
-  "readme": "README.md",
 	"repository" :
 	{ "type" : "git"
 	, "url" : "https://github.com/Typeform/openapi-micro-merge.git"
