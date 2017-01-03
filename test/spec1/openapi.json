@@ -24,6 +24,8 @@
     ],
     "paths": {
         "/users": {
+            "x-visibility": "EXTERNAL",
+            "x-status": "RELEASED",
             "get": {
                 "parameters": [{
                     "name": "limit",

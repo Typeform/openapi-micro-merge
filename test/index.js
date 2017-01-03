@@ -14,7 +14,7 @@ const outputFile = './test/swagger.json'
 describe('openapi-merge', function() {
 	describe('#prepare()', function(){
 		it('should merge two openapi specs', function(done) {
-			oam.prepare(specDir, specFile, infoFile, host, schemes, basePath, function(err, apis) {
+			oam.prepare(specDir, specFile, infoFile, host, schemes, basePath, {}, function(err, apis) {
 				if (err) {
 					done(err);
 				} else {
@@ -35,9 +35,35 @@ describe('openapi-merge', function() {
 			});
 		});
 	});
+
+  describe('#prepare()', function(){
+		it('should merge two openapi specs with filters', function(done) {
+			oam.prepare(specDir, specFile, infoFile, host, schemes, basePath, 
+          {visibilityFilter: "EXTERNAL", statusFilter: "RELEASED"}, function(err, apis) {
+				if (err) {
+					done(err);
+				} else {
+					apis.should.not.be.null;
+					apis.should.not.be.undefined;
+					apis.info.version.should.eql('1.0');
+					apis.info.title.should.eql('Merged OpenAPI');
+					apis.basePath.should.eql(basePath);
+					apis.host.should.eql(host);
+					apis.schemes.should.have.size(2);
+					apis.paths.should.be.a.Array;
+					apis.paths.should.have.size(2);
+					apis.parameters.should.have.size(2);
+					apis.responses.should.have.size(2);
+					
+					done();
+				}
+			});
+		});
+  });
+
   describe('#write', function() {
     it('should save merged specs', function(done) {
-			oam.write(specDir, specFile, infoFile, host, schemes, basePath, outputFile, 
+			oam.write(specDir, specFile, infoFile, host, schemes, basePath, outputFile, {}, 
 				function(err) {
 					if (err) {
 						done(err);

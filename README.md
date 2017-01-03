@@ -32,10 +32,11 @@ This is very useful for microservice environments where service specs are stored
   const host = 'api.test.com';
   const schemes = ['http', 'https'];
   const basePath = '/';
+  const options = {visibilityFilter: 'EXTERNAL', statusFilter: 'RELEASED'};
   const outputFile = './test/swagger.json'
 
   // Returns a merged OpenAPI object
-  microMerge.prepare(specDir, specFile, infoFile, host, schemes, basePath, 
+  microMerge.prepare(specDir, specFile, infoFile, host, schemes, basePath, options,
     function(err, data) {
       console.log(data);
   });
@@ -47,7 +48,7 @@ This is very useful for microservice environments where service specs are stored
     });
 
   // Writes a merged OpenAPI spec
-  microMerge.write(specDir, specFile, infoFile, host, schemes, basePath, outputFile, 
+  microMerge.write(specDir, specFile, infoFile, host, schemes, basePath, options, outputFile, 
     function(err) {
       if (err) {
         console.log(err);
@@ -55,8 +56,21 @@ This is very useful for microservice environments where service specs are stored
   });
 ```
 
+## Extensions
+
+OpenAPI extensions are supported to aid in filtering the list of operations based on the audience.
+
+* `x-visibility`: 
+  * `path` level: Determines if path is for external or internal use.
+  * Allowed options: `EXTERNAL`, `INTERNAL`.
+* `x-status`:
+  * `path` level: Determines development status of the path.
+  * Allowed options: `PROPOSED`, `IN_DEVELOPMENT`, `RELEASED`
+
+
 ## TODO
 
+* [ ] Strip all extensions
 * [ ] YAML output for merged spec in save()
 * [ ] Full dereferencing option instead of bundling
 * [ ] Support JSON for info file

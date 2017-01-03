@@ -3,10 +3,10 @@
   "version": "0.0.6",
   "description": "Merge OpenAPI (fka Swagger) definitions for microservice environments.",
   "main": "lib/index.js",
-	"repository" :
-	{ "type" : "git"
-	, "url" : "https://github.com/Typeform/openapi-micro-merge.git"
-	},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Typeform/openapi-micro-merge.git"
+  },
   "scripts": {
     "test": "mocha"
   },
@@ -23,7 +23,8 @@
     "lodash": "^4.17.2",
     "node-dir": "git://github.com/fshost/node-dir.git#cba03d9322c35d70a0743d18e02d4fd3d3b2b90c",
     "swagger-merge": "^0.3.2",
-    "swagger-parser": "^3.4.1"
+    "swagger-parser": "^3.4.1",
+    "validate.js": "^0.11.1"
   },
   "devDependencies": {
     "mocha": "^3.2.0",
