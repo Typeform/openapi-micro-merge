@@ -1,6 +1,6 @@
 {
   "name": "openapi-micro-merge",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Merge OpenAPI (fka Swagger) definitions for microservice environments.",
   "main": "lib/index.js",
   "repository": {
