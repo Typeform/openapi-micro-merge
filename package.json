@@ -1,6 +1,6 @@
 {
   "name": "openapi-micro-merge",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Merge OpenAPI (fka Swagger) definitions for microservice environments.",
   "main": "lib/index.js",
   "repository": {
@@ -8,7 +8,8 @@
     "url": "https://github.com/Typeform/openapi-micro-merge.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "install:token": "echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc"
   },
   "keywords": [
     "API",
