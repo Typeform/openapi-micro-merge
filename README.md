@@ -1,5 +1,7 @@
 # openapi-micro-merge
 
+[![Build Status](https://travis-ci.com/Typeform/openapi-micro-merge.svg?branch=master)](https://travis-ci.com/Typeform/openapi-micro-merge)
+
 Node library used to recursively search a directory for a regex or pattern to find OpenAPI specs; subsequently validates, bundles and merges them into one spec. Optionally writes merged spec to a file.
 
 This is very useful for microservice environments where service specs are stored in separate directories, but need to be merged into one file for various purposes (docs, tooling, etc). Intended to be used in CI environments, where validating specs is a critical need.
