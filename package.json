@@ -22,7 +22,7 @@
     "bluebird": "^3.4.6",
     "js-yaml": "^3.7.0",
     "lodash": "^4.17.2",
-    "node-dir": "git://github.com/fshost/node-dir.git#cba03d9322c35d70a0743d18e02d4fd3d3b2b90c",
+    "node-dir": "^0.1.17",
     "swagger-merge": "^0.4.0",
     "swagger-parser": "^3.4.1",
     "validate.js": "^0.11.1"
