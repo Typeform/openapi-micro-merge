@@ -1,3 +1,9 @@
+### IMPORTANT NOTE
+
+⚠️ **This library hasn't been maintained for a while so we've decided to deprecate it and archive the repository. Feel free to fork it!** 
+
+---
+
 # openapi-micro-merge
 
 [![Build Status](https://travis-ci.com/Typeform/openapi-micro-merge.svg?branch=main)](https://travis-ci.com/Typeform/openapi-micro-merge)
