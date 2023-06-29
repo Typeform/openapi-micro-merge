@@ -17,4 +17,4 @@ script:
   - npm test
 
 after_success:
-  - test "${TRAVIS_BRANCH}" = "master" -a "${TRAVIS_PULL_REQUEST}" = "false" && npm publish
+  - test "${TRAVIS_BRANCH}" = "main" -a "${TRAVIS_PULL_REQUEST}" = "false" && npm publish

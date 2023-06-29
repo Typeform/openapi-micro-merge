@@ -1,6 +1,6 @@
 # openapi-micro-merge
 
-[![Build Status](https://travis-ci.com/Typeform/openapi-micro-merge.svg?branch=master)](https://travis-ci.com/Typeform/openapi-micro-merge)
+[![Build Status](https://travis-ci.com/Typeform/openapi-micro-merge.svg?branch=main)](https://travis-ci.com/Typeform/openapi-micro-merge)
 
 Node library used to recursively search a directory for a regex or pattern to find OpenAPI specs; subsequently validates, bundles and merges them into one spec. Optionally writes merged spec to a file.
 
